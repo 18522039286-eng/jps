@@ -1,0 +1,9 @@
+[01m[K/home/baist/jps_planner/src/jps_planner.cpp:81:18:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kheuristic[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   81 |     static const [01;31m[Kheuristic[m[K(int x,int y,int gx,int gy){
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/baist/jps_planner/src/jps_planner.cpp:81:12:[m[K [01;35m[Kwarning: [m[Ktype qualifiers ignored on function return type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-qualifiers-Wignored-qualifiers]8;;[m[K]
+   81 |     static [01;35m[Kconst[m[K heuristic(int x,int y,int gx,int gy){
+      |            [01;35m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/jps_planner.dir/build.make:76: CMakeFiles/jps_planner.dir/src/jps_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/jps_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

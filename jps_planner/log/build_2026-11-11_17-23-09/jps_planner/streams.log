@@ -1,0 +1,13 @@
+[0.088s] Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8
+[0.429s] [35m[1mConsolidate compiler generated dependencies of target jps_planner[0m
+[0.549s] [ 50%] [32mBuilding CXX object CMakeFiles/jps_planner.dir/src/jps_planner.cpp.o[0m
+[16.784s] [01m[K/home/baist/jps_planner/src/jps_planner.cpp:81:18:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kheuristic[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[16.785s]    81 |     static const [01;31m[Kheuristic[m[K(int x,int y,int gx,int gy){
+[16.785s]       |                  [01;31m[K^~~~~~~~~[m[K
+[16.785s] [01m[K/home/baist/jps_planner/src/jps_planner.cpp:81:12:[m[K [01;35m[Kwarning: [m[Ktype qualifiers ignored on function return type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-qualifiers-Wignored-qualifiers]8;;[m[K]
+[16.786s]    81 |     static [01;35m[Kconst[m[K heuristic(int x,int y,int gx,int gy){
+[16.786s]       |            [01;35m[K^~~~~[m[K
+[38.576s] gmake[2]: *** [CMakeFiles/jps_planner.dir/build.make:76: CMakeFiles/jps_planner.dir/src/jps_planner.cpp.o] Error 1
+[38.577s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/jps_planner.dir/all] Error 2
+[38.577s] gmake: *** [Makefile:146: all] Error 2
+[38.588s] Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8

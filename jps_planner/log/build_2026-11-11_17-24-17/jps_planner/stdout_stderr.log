@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target jps_planner[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/jps_planner.dir/src/jps_planner.cpp.o[0m
+[100%] [32m[1mLinking CXX executable jps_planner[0m
+[100%] Built target jps_planner
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/lib/jps_planner/jps_planner
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/ament_index/resource_index/package_run_dependencies/jps_planner
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/ament_index/resource_index/parent_prefix_path/jps_planner
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/path.sh
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/path.dsv
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.bash
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.sh
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.zsh
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.dsv
+-- Symlinking: /home/baist/jps_planner/install/jps_planner/share/jps_planner/package.dsv
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/ament_index/resource_index/packages/jps_planner
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/cmake/jps_plannerConfig.cmake
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/cmake/jps_plannerConfig-version.cmake
+-- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/package.xml

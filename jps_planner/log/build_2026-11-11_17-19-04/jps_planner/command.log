@@ -1,0 +1,6 @@
+Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/baist/jps_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/baist/jps_planner/install/jps_planner
+Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/baist/jps_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/baist/jps_planner/install/jps_planner
+Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8
+Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8
+Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/baist/jps_planner/build/jps_planner
+Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/baist/jps_planner/build/jps_planner

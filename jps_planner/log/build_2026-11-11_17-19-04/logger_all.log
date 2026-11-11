@@ -1,0 +1,105 @@
+[0.595s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.596s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x79719225a8f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x79719225a440>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x79719225a440>>, mixin_verb=('build',))
+[1.466s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.467s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.468s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.468s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.468s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.469s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/baist/jps_planner'
+[1.470s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.470s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.472s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.472s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.472s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.472s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.472s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.549s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'jps_planner'
+[1.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.550s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.699s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.700s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.716s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 318 installed packages in /opt/ros/humble
+[1.726s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.985s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'cmake_args' from command line to 'None'
+[1.985s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'cmake_target' from command line to 'None'
+[1.985s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.985s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[1.985s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'cmake_clean_first' from command line to 'False'
+[1.986s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'cmake_force_configure' from command line to 'False'
+[1.986s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'ament_cmake_args' from command line to 'None'
+[1.986s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[1.986s] Level 5:colcon.colcon_core.verb:set package 'jps_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.986s] DEBUG:colcon.colcon_core.verb:Building package 'jps_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baist/jps_planner/build/jps_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baist/jps_planner/install/jps_planner', 'merge_install': False, 'path': '/home/baist/jps_planner', 'symlink_install': True, 'test_result_base': None}
+[1.987s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.992s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.993s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/baist/jps_planner' with build type 'ament_cmake'
+[1.994s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/baist/jps_planner'
+[2.005s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.006s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.006s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.074s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/baist/jps_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/baist/jps_planner/install/jps_planner
+[4.887s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/baist/jps_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/baist/jps_planner/install/jps_planner
+[4.909s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8
+[85.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8
+[85.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/baist/jps_planner/build/jps_planner
+[86.402s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(jps_planner)
+[86.406s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/baist/jps_planner/build/jps_planner
+[86.422s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner' for CMake module files
+[86.425s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner' for CMake config files
+[86.428s] Level 1:colcon.colcon_core.shell:create_environment_hook('jps_planner', 'cmake_prefix_path')
+[86.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baist/jps_planner/install/jps_planner/share/jps_planner/hook/cmake_prefix_path.ps1'
+[86.435s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baist/jps_planner/install/jps_planner/share/jps_planner/hook/cmake_prefix_path.dsv'
+[86.438s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baist/jps_planner/install/jps_planner/share/jps_planner/hook/cmake_prefix_path.sh'
+[86.441s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/lib'
+[86.442s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/bin'
+[86.443s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/lib/pkgconfig/jps_planner.pc'
+[86.444s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/lib/python3.10/site-packages'
+[86.445s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/bin'
+[86.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.ps1'
+[86.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.dsv'
+[86.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.sh'
+[86.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.bash'
+[86.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.zsh'
+[86.467s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baist/jps_planner/install/jps_planner/share/colcon-core/packages/jps_planner)
+[86.470s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(jps_planner)
+[86.471s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner' for CMake module files
+[86.474s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner' for CMake config files
+[86.475s] Level 1:colcon.colcon_core.shell:create_environment_hook('jps_planner', 'cmake_prefix_path')
+[86.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baist/jps_planner/install/jps_planner/share/jps_planner/hook/cmake_prefix_path.ps1'
+[86.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baist/jps_planner/install/jps_planner/share/jps_planner/hook/cmake_prefix_path.dsv'
+[86.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baist/jps_planner/install/jps_planner/share/jps_planner/hook/cmake_prefix_path.sh'
+[86.485s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/lib'
+[86.486s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/bin'
+[86.487s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/lib/pkgconfig/jps_planner.pc'
+[86.489s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/lib/python3.10/site-packages'
+[86.491s] Level 1:colcon.colcon_core.environment:checking '/home/baist/jps_planner/install/jps_planner/bin'
+[86.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.ps1'
+[86.497s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.dsv'
+[86.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.sh'
+[86.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.bash'
+[86.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/baist/jps_planner/install/jps_planner/share/jps_planner/package.zsh'
+[86.515s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baist/jps_planner/install/jps_planner/share/colcon-core/packages/jps_planner)
+[86.517s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[86.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[86.520s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[86.520s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[86.553s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[86.553s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[86.554s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[86.646s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[86.648s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baist/jps_planner/install/local_setup.ps1'
+[86.654s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/baist/jps_planner/install/_local_setup_util_ps1.py'
+[86.661s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baist/jps_planner/install/setup.ps1'
+[86.666s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baist/jps_planner/install/local_setup.sh'
+[86.669s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/baist/jps_planner/install/_local_setup_util_sh.py'
+[86.674s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baist/jps_planner/install/setup.sh'
+[86.679s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baist/jps_planner/install/local_setup.bash'
+[86.681s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baist/jps_planner/install/setup.bash'
+[86.688s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baist/jps_planner/install/local_setup.zsh'
+[86.691s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baist/jps_planner/install/setup.zsh'

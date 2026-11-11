@@ -1,0 +1,26 @@
+[0.065s] Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8
+[0.376s] [35m[1mConsolidate compiler generated dependencies of target jps_planner[0m
+[0.499s] [ 50%] [32mBuilding CXX object CMakeFiles/jps_planner.dir/src/jps_planner.cpp.o[0m
+[65.253s] [100%] [32m[1mLinking CXX executable jps_planner[0m
+[68.118s] [100%] Built target jps_planner
+[68.192s] Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/baist/jps_planner/build/jps_planner -- -j8 -l8
+[68.263s] Invoking command in '/home/baist/jps_planner/build/jps_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/baist/jps_planner/build/jps_planner
+[68.321s] -- Install configuration: ""
+[68.322s] -- Execute custom install script
+[68.325s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/lib/jps_planner/jps_planner
+[68.328s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/ament_index/resource_index/package_run_dependencies/jps_planner
+[68.328s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/ament_index/resource_index/parent_prefix_path/jps_planner
+[68.330s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/ament_prefix_path.sh
+[68.332s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/ament_prefix_path.dsv
+[68.335s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/path.sh
+[68.336s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/environment/path.dsv
+[68.336s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.bash
+[68.337s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.sh
+[68.339s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.zsh
+[68.340s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/local_setup.dsv
+[68.341s] -- Symlinking: /home/baist/jps_planner/install/jps_planner/share/jps_planner/package.dsv
+[68.401s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/ament_index/resource_index/packages/jps_planner
+[68.402s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/cmake/jps_plannerConfig.cmake
+[68.406s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/cmake/jps_plannerConfig-version.cmake
+[68.406s] -- Up-to-date symlink: /home/baist/jps_planner/install/jps_planner/share/jps_planner/package.xml
+[68.416s] Invoked command in '/home/baist/jps_planner/build/jps_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/baist/jps_planner/build/jps_planner
