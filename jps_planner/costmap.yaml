@@ -14,3 +14,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         inflation_radius: 0.55
+
+jps_planner:
+  ros__parameters:
+    blocked_cost_threshold: 50

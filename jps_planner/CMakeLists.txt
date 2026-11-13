@@ -31,5 +31,10 @@ ament_target_dependencies(jps_planner
 install(TARGETS jps_planner
   DESTINATION lib/${PROJECT_NAME}
 )
-
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+install(FILES costmap.yaml
+  DESTINATION share/${PROJECT_NAME}/config
+)
 ament_package()

@@ -18,7 +18,7 @@ class planner : public rclcpp::Node{
 public:
     planner() : Node("jps_planner"){
         allow_unknown_ = declare_parameter("allow_unknown",false);
-        blocked_cost_threshold_ = declare_parameter("blocked_cost_threshold",90);
+        blocked_cost_threshold_ = declare_parameter("blocked_cost_threshold",50);
         start_x_ = declare_parameter("start_x",0.0);
         start_y_ = declare_parameter("start_y",0.0);
         costmap_sub_ = create_subscription<nav_msgs::msg::OccupancyGrid>(
@@ -324,6 +324,107 @@ public:
             interpolated.push_back(curr_pose);
             prev_wx=curr_wx;
             prev_wy=curr_wy;
+        }
+
+        const size_t point_count = interpolated.size();
+        std::vector<bool> direction_changes(point_count, false);
+        for(size_t i=1;i+1<point_count;i++){
+            const double in_x = interpolated[i].pose.position.x -
+                interpolated[i-1].pose.position.x;
+            const double in_y = interpolated[i].pose.position.y -
+                interpolated[i-1].pose.position.y;
+            const double out_x = interpolated[i+1].pose.position.x -
+                interpolated[i].pose.position.x;
+            const double out_y = interpolated[i+1].pose.position.y -
+                interpolated[i].pose.position.y;
+            const double in_length = std::hypot(in_x,in_y);
+            const double out_length = std::hypot(out_x,out_y);
+            if(in_length==0.0||out_length==0.0){
+                continue;
+            }
+            const double direction_difference = std::hypot(
+                in_x/in_length-out_x/out_length,
+                in_y/in_length-out_y/out_length);
+            direction_changes[i] = direction_difference>1e-6;
+        }
+        std::vector<size_t> corners;
+        for(size_t i=1;i+1<point_count;i++){
+            if(direction_changes[i]){
+                corners.push_back(i);
+            }
+        }
+        std::vector<bool> smoothed_window(point_count, false);
+        for(size_t corner_index=0;corner_index<corners.size();corner_index++){
+            const size_t i = corners[corner_index];
+            const size_t parent_corner = corner_index==0 ? 0 : corners[corner_index-1];
+            const size_t child_corner = corner_index+1==corners.size() ?
+                point_count-1 : corners[corner_index+1];
+            size_t first_index = parent_corner+1;
+            size_t last_index = child_corner-1;
+            if(first_index>=i||last_index<=i){
+                continue;
+            }
+            const size_t max_smoothing_points = 20;
+            if(last_index-first_index+1>max_smoothing_points){
+                const size_t points_before = std::min(i-first_index,(max_smoothing_points-1)/2);
+                const size_t points_after = std::min(last_index-i,max_smoothing_points/2);
+                first_index = i-points_before;
+                last_index = i+points_after;
+            }
+            bool overlaps = false;
+            for(size_t index=first_index;index<=last_index;index++){
+                if(smoothed_window[index]){
+                    overlaps = true;
+                    break;
+                }
+            }
+            if(overlaps){
+                continue;
+            }
+            const auto & start = interpolated[first_index].pose.position;
+            const auto & control = interpolated[i].pose.position;
+            const auto & end = interpolated[last_index].pose.position;
+            const size_t sample_count = last_index-first_index+1;
+            std::vector<std::pair<double,double>> curve;
+            curve.reserve(sample_count);
+            for(size_t j=0;j<sample_count;j++){
+                const double t = static_cast<double>(j)/(sample_count-1);
+                const double u = 1.0-t;
+                curve.emplace_back(
+                    u*u*start.x+2.0*u*t*control.x+t*t*end.x,
+                    u*u*start.y+2.0*u*t*control.y+t*t*end.y);
+            }
+            bool collision = false;
+            const double check_step = resolution_*0.5;
+            for(size_t j=1;j<curve.size()&&!collision;j++){
+                const double dx = curve[j].first-curve[j-1].first;
+                const double dy = curve[j].second-curve[j-1].second;
+                const double length = std::hypot(dx,dy);
+                const int steps = std::max(
+                    1,static_cast<int>(std::ceil(length/check_step)));
+                for(int k=0;k<=steps;k++){
+                    const double t = static_cast<double>(k)/steps;
+                    int gx=0;
+                    int gy=0;
+                    worldtogrid(
+                        curve[j-1].first+t*dx,
+                        curve[j-1].second+t*dy,
+                        gx,gy);
+                    if(!isfree(gx,gy)){
+                        collision = true;
+                        break;
+                    }
+                }
+            }
+            if(collision){
+                continue;
+            }
+            for(size_t j=0;j<curve.size();j++){
+                const size_t index = first_index+j;
+                interpolated[index].pose.position.x = curve[j].first;
+                interpolated[index].pose.position.y = curve[j].second;
+                smoothed_window[index] = true;
+            }
         }
         path_msg.poses=std::move(interpolated);
         path_pub_->publish(path_msg);
