@@ -59,7 +59,6 @@ public:
             get_logger(),"map received,%d*%d,resolution=%.3f,origin(%.2f,%.2f)",
             width_,height_,resolution_,origin_x_,origin_y_
         );
-
     }
     //1能通行，0不能
     bool isfree(int x,int y) const{
@@ -325,7 +324,7 @@ public:
             prev_wx=curr_wx;
             prev_wy=curr_wy;
         }
-
+        //二次贝塞尔曲线
         const size_t point_count = interpolated.size();
         std::vector<bool> direction_changes(point_count, false);
         for(size_t i=1;i+1<point_count;i++){
@@ -488,7 +487,6 @@ public:
         publishpath(path);
         goal_received_ =false;
     }
-    
 };
 int main(int argc,char ** argv){
     rclcpp::init(argc,argv);
