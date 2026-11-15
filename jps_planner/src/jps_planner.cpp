@@ -352,32 +352,14 @@ public:
                 corners.push_back(i);
             }
         }
-        std::vector<bool> smoothed_window(point_count, false);
         for(size_t corner_index=0;corner_index<corners.size();corner_index++){
             const size_t i = corners[corner_index];
             const size_t parent_corner = corner_index==0 ? 0 : corners[corner_index-1];
             const size_t child_corner = corner_index+1==corners.size() ?
                 point_count-1 : corners[corner_index+1];
-            size_t first_index = parent_corner+1;
-            size_t last_index = child_corner-1;
+            const size_t first_index = parent_corner+(i-parent_corner)/2;
+            const size_t last_index = i+(child_corner-i)/2;
             if(first_index>=i||last_index<=i){
-                continue;
-            }
-            const size_t max_smoothing_points = 20;
-            if(last_index-first_index+1>max_smoothing_points){
-                const size_t points_before = std::min(i-first_index,(max_smoothing_points-1)/2);
-                const size_t points_after = std::min(last_index-i,max_smoothing_points/2);
-                first_index = i-points_before;
-                last_index = i+points_after;
-            }
-            bool overlaps = false;
-            for(size_t index=first_index;index<=last_index;index++){
-                if(smoothed_window[index]){
-                    overlaps = true;
-                    break;
-                }
-            }
-            if(overlaps){
                 continue;
             }
             const auto & start = interpolated[first_index].pose.position;
@@ -422,7 +404,6 @@ public:
                 const size_t index = first_index+j;
                 interpolated[index].pose.position.x = curve[j].first;
                 interpolated[index].pose.position.y = curve[j].second;
-                smoothed_window[index] = true;
             }
         }
         path_msg.poses=std::move(interpolated);
